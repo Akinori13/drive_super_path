@@ -1,0 +1,22 @@
+{
+    "name": "Drive Super Path",
+    "version": "1.0.0",
+    "manifest_version": 2,
+    "description": "Drive のフォルダーをクリック時に、新しいタブを開きます",
+    "icons": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "content_scripts": [{
+      "run_at":"document_idle",
+      "matches": ["https://drive.google.com/drive/*"],
+      "js": [
+        "jquery-3.6.0.min.js",
+        "content.js"
+      ],
+      "css": [
+        "master.css"
+      ]
+    }]
+  }
